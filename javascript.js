@@ -53,7 +53,7 @@ function playRound(playerSelection, computerSelection, winner) {
     } else if ((playerSelection === "SCISSORS") && (computerSelection === "Scissors")) {
         winner = "None";
         console.log(winner);
-        return ("A tie!");
+        return winner;
     } else if ((playerSelection === "ROCK") && (computerSelection === "Paper")) {
         winner = "Computer";
         console.log(winner);
@@ -65,7 +65,7 @@ function playRound(playerSelection, computerSelection, winner) {
     } else if ((playerSelection === "SCISSORS") && (computerSelection === "Paper")) {
         winner = "Player";
         console.log(winner);
-        return ("You win! Scissors beat paper!");
+        return winner;
     } else if ((playerSelection === "ROCK") && (computerSelection === "Rock")) {
         winner = "None";
         console.log(winner);
@@ -76,15 +76,17 @@ function playRound(playerSelection, computerSelection, winner) {
         return ("You win! Paper beats rock!");
     } else if ((playerSelection === "SCISSORS") && (computerSelection === "Rock")) {
         winner = "Computer";
-        console.log(winner);return ("You lose! Rock beats scissors!");
+        console.log(winner);
+        return winner;
     }
 }
 
-/* Play 5 rounds of Rock Paper Scissors, keeping score and declaring a winner at the end
+// Play 5 rounds of Rock Paper Scissors, keeping score and declaring a winner at the end
 function playGame() {
     let playerScore = 0;
     let computerScore = 0;
 
-    playRound();
-    if playRound()     
-}*/
+    console.log(playRound()); 
+
+    
+}
