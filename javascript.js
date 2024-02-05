@@ -140,4 +140,10 @@ function playGame() {
     }
 
     console.log(playerScore, computerScore)
+
+    if (playerScore > computerScore) {
+        alert("You win best of 5!")
+    } else if (playerScore < computerScore) {
+        alert("Computer wins best of 5!")
+    } else {alert("A 5-round tie!")}
 }
