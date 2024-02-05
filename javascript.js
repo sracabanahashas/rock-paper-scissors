@@ -86,8 +86,58 @@ function playGame() {
     let playerScore = 0;
     let computerScore = 0;
 
-    if (playRound() === "Player") {
+    let roundWinner = playRound();
+    console.log(roundWinner);
+
+    if (roundWinner === "Player") {
         playerScore = ++playerScore;
+    } else if (roundWinner === "Computer") {
+        computerScore = ++computerScore;
     }
-    console.log(playerScore)
+
+    console.log(playerScore, computerScore)
+
+    roundWinner = playRound();
+    console.log(roundWinner);
+
+    if (roundWinner === "Player") {
+        playerScore = ++playerScore;
+    } else if (roundWinner === "Computer") {
+        computerScore = ++computerScore;
+    }
+
+    console.log(playerScore, computerScore)
+
+    roundWinner = playRound();
+    console.log(roundWinner);
+
+    if (roundWinner === "Player") {
+        playerScore = ++playerScore;
+    } else if (roundWinner === "Computer") {
+        computerScore = ++computerScore;
+    }
+
+    console.log(playerScore, computerScore)
+
+    roundWinner = playRound();
+    console.log(roundWinner);
+
+    if (roundWinner === "Player") {
+        playerScore = ++playerScore;
+    } else if (roundWinner === "Computer") {
+        computerScore = ++computerScore;
+    }
+
+    console.log(playerScore, computerScore)
+
+    roundWinner = playRound();
+    console.log(roundWinner);
+
+    if (roundWinner === "Player") {
+        playerScore = ++playerScore;
+    } else if (roundWinner === "Computer") {
+        computerScore = ++computerScore;
+    }
+
+    console.log(playerScore, computerScore)
 }
