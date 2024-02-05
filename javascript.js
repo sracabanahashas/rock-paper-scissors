@@ -45,11 +45,11 @@ function playRound(playerSelection, computerSelection, winner) {
     if ((playerSelection === "ROCK") && (computerSelection === "Scissors")) {
         winner = "Player";
         console.log(winner);
-        return ("You win! Rock beats Scissors!");
+        return winner;
     } else if ((playerSelection === "PAPER") && (computerSelection === "Scissors")) {
         winner = "Computer";
         console.log(winner);
-        return ("You lose! Scissors beat paper!");
+        return winner;
     } else if ((playerSelection === "SCISSORS") && (computerSelection === "Scissors")) {
         winner = "None";
         console.log(winner);
@@ -57,11 +57,11 @@ function playRound(playerSelection, computerSelection, winner) {
     } else if ((playerSelection === "ROCK") && (computerSelection === "Paper")) {
         winner = "Computer";
         console.log(winner);
-        return ("You lose! Paper beats rock!");
+        return winner;
     } else if ((playerSelection === "PAPER") && (computerSelection === "Paper")) {
         winner = "None";
         console.log(winner);
-        return ("A tie!");
+        return winner;
     } else if ((playerSelection === "SCISSORS") && (computerSelection === "Paper")) {
         winner = "Player";
         console.log(winner);
@@ -69,11 +69,11 @@ function playRound(playerSelection, computerSelection, winner) {
     } else if ((playerSelection === "ROCK") && (computerSelection === "Rock")) {
         winner = "None";
         console.log(winner);
-        return ("A tie!");
+        return winner;
     } else if ((playerSelection === "PAPER") && (computerSelection === "Rock")) {
         winner = "Player";
         console.log(winner);
-        return ("You win! Paper beats rock!");
+        return winner;
     } else if ((playerSelection === "SCISSORS") && (computerSelection === "Rock")) {
         winner = "Computer";
         console.log(winner);
@@ -86,7 +86,8 @@ function playGame() {
     let playerScore = 0;
     let computerScore = 0;
 
-    console.log(playRound()); 
-
-    
+    if (playRound() === "Player") {
+        playerScore = ++playerScore;
+    }
+    console.log(playerScore)
 }
