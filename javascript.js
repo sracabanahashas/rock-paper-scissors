@@ -1,3 +1,5 @@
+console.log("Hello World!");
+
 // Make the computer's play by randomly selecting "Rock", "Paper", or "Scissors"//
 function getComputerChoice() {
     let randomSelection = Math.random();
@@ -65,6 +67,27 @@ function playRound(playerSelection, computerSelection, winner) {
     }
 }
 
+rockBtn = document.querySelector('#rock');
+paperBtn = document.querySelector('#paper');
+scissorsBtn = document.querySelector('#scissors');
+
+rockBtn.addEventListener('click', () => {
+    computerSelection = getComputerChoice();
+    console.log(computerSelection);
+    
+    if (computerSelection === "Scissors") {
+        winner = "Player";
+        console.log(winner);
+        return winner;
+    } else if (computerSelection === "Paper") {
+        winner = "Computer";
+        console.log(winner);
+        return winner;
+    } else winner = "None";
+        console.log(winner);
+        return winner;
+});
+
 // Play 5 rounds of Rock Paper Scissors, keeping score and declaring a winner at the end
 /*function playGame() {
     let playerScore = 0;
@@ -130,4 +153,4 @@ function playRound(playerSelection, computerSelection, winner) {
     } else if (playerScore < computerScore) {
         alert("Computer wins best of 5!")
     } else {alert("A 5-round tie!")}
-}
+}*/
