@@ -66,7 +66,7 @@ function playRound(playerSelection, computerSelection, winner) {
 }
 
 // Play 5 rounds of Rock Paper Scissors, keeping score and declaring a winner at the end
-function playGame() {
+/*function playGame() {
     let playerScore = 0;
     let computerScore = 0;
 
