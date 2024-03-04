@@ -19,8 +19,8 @@ return computerSelection;
 
 // Play a round by asking for player's choice, then determining winner based on computer's play//
 function playRound(playerSelection, computerSelection, winner) {
-    playerSelection = prompt("Rock, paper or scissors?");
-    playerSelection = playerSelection.toUpperCase();
+    //playerSelection = playerSelection;
+    //playerSelection = playerSelection.toUpperCase();
     console.log(playerSelection);
     
     computerSelection = getComputerChoice();
@@ -72,21 +72,17 @@ paperBtn = document.querySelector('#paper');
 scissorsBtn = document.querySelector('#scissors');
 
 rockBtn.addEventListener('click', () => {
-    computerSelection = getComputerChoice();
-    console.log(computerSelection);
-    
-    if (computerSelection === "Scissors") {
-        winner = "Player";
-        console.log(winner);
-        return winner;
-    } else if (computerSelection === "Paper") {
-        winner = "Computer";
-        console.log(winner);
-        return winner;
-    } else winner = "None";
-        console.log(winner);
-        return winner;
+    playRound('ROCK');
 });
+
+paperBtn.addEventListener('click', () => {
+    playRound('PAPER');
+});
+
+scissorsBtn.addEventListener('click', () => {
+    playRound('SCISSORS');
+});
+
 
 // Play 5 rounds of Rock Paper Scissors, keeping score and declaring a winner at the end
 /*function playGame() {
